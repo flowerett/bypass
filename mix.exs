@@ -35,10 +35,8 @@ defmodule Bypass.Mixfile do
   # dependencies in when in the test env.
   defp deps(:test) do
     deps() ++ [
-      {:cowlib, "~> 1.0.1", override: true},
-      {:ranch, "~> 1.2.0", override: true},
-
-      {:gun, github: "PSPDFKit-labs/gun", only: :test}
+      {:cowlib, github: "ninenines/cowlib", only: :test, override: true},
+      {:gun, github: "ninenines/gun", only: :test}
     ]
   end
   defp deps(_), do: deps()
